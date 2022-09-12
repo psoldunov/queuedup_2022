@@ -4,7 +4,6 @@ function qu_enqueue_scripts() {
   wp_deregister_script( 'jquery' );
   wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', false, null, true );
   wp_enqueue_script('webflow', get_template_directory_uri() . '/js/webflow.js', array( 'jquery' ), null, true );
-  wp_enqueue_script('plyr', get_template_directory_uri() . '/js/plyr.js', array( 'jquery' ), null, true );
   if (!disableVoting()) {
     wp_enqueue_script('voting', get_template_directory_uri() . '/js/voting.js', array( 'jquery' ), null, true );
     wp_localize_script( 'voting', 'bloginfo', array(
