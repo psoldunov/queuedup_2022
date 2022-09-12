@@ -10,6 +10,7 @@
       wp_title();
       ?> | Identify creators in the gaming space who are on the rise, and give them a launch pad to stardom.
   </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta name="description"
     content="The selected creators will receive benefits and prize packages designed to help scale their brands, including a 12-month paid contract with HyperX and an all-expense paid trip to Los Angeles, CA.">
   <meta property="og:title"
