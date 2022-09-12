@@ -28,12 +28,11 @@ for (var i = 0; i < voteSelectorBtns.length; i++) {
 		e.target.classList.add('voted')
 
 		voteCount += 1
-
 		if (voteCount >= 5) {
-			disableVoteBtns()
 			alert(
 				'You have cast all your votes for today! Come back tomorrow to cast more votes!'
 			)
+			disableVoteBtns()
 		}
 	})
 }
@@ -46,8 +45,4 @@ function disableVoteBtns() {
 			voteSelectorBtns[i].setAttribute('disabled', '')
 		}
 	}
-}
-
-if (reloadVotes >= 5) {
-	disableVoteBtns()
 }

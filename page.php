@@ -1,16 +1,15 @@
 <?php get_header(); ?>
-
-  <div class="qu-hero wf-section">
-    <div class="hero-inner qu-page">
-      <div class="qu-page-wrap">
-        <div class="qu-page-container">
-          <h1 class="qu-page-h1"><?php the_title(); ?></h1>
-          <div class="qu-page-rt w-richtext">
+<section class="section-content wf-section">
+  <div class="page-padding">
+    <div class="container-small">
+      <div class="padding-section-huge">
+        <div class="max-width-medium align-center">
+          <div class="w-richtext">
             <?php the_content(); ?>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+</section>
 <?php get_footer(); ?>

@@ -75,25 +75,37 @@
           <div class="creators-info-lower">
             <div class="creator-block_modal_lower-block">
               <div class="creator-block_modal_social-btn-grid">
-                <a href="#" class="creator-block_modal_social-btn w-inline-block">
-                  <?php get_icon('facebook', 'medium') ?>
+                <?php
+                  $socials = array('facebook', 'instagram', 'twitter', 'patreon');
+
+                  foreach ($socials as &$social) {
+                    $soc_handle = get_post_meta( $post->ID, 'qu_' . $social, true );
+                    if ($soc_handle) { ?>
+
+                <a target="_blank" href="https://www.<?php echo $social; ?>.com/<?php echo $soc_handle; ?>"
+                  class="creator-block_modal_social-btn w-inline-block">
+                  <?php get_icon($social, 'medium' ) ?>
                 </a>
-                <a href="#" class="creator-block_modal_social-btn w-inline-block">
-                  <?php get_icon('instagram', 'medium') ?>
-                </a>
-                <a href="#" class="creator-block_modal_social-btn w-inline-block">
-                  <?php get_icon('twitter', 'medium') ?>
-                </a>
-                <a href="#" class="creator-block_modal_social-btn w-inline-block">
+                <?php }
+                  }
+
+                  $tik_handle = get_post_meta( $post->ID, 'qu_tiktok', true );
+                  if ($tik_handle) { ?>
+
+                <a target="_blank" href="https://www.tiktok.com/@<?php echo $tik_handle; ?>"
+                  class="social-btn w-inline-block">
                   <?php get_icon('tiktok', 'medium') ?>
                 </a>
+
+                <?php } ?>
+
               </div>
               <?php if (!disableVoting()) { ?>
               <div class="creator-block_modal_vote-btn_wrap">
 
                 <?php if ( is_user_logged_in() ) {
 
-                    $creators_array = array_map('intval', explode(", ", get_user_meta($current_user->ID, 'creators_ids', true)));
+                    $creators_array = array_map('intval', explode(", ", get_user_meta($args['user_id'], 'creators_ids', true)));
 
                   ?>
 
@@ -104,7 +116,7 @@
 
                 <?php } else { ?>
 
-                <?php if ( get_user_meta($current_user->ID, 'us_vote_counter', true) < 5 ) { ?>
+                <?php if ( get_user_meta($args['user_id'], 'us_vote_counter', true) < 5 ) { ?>
 
                 <button creator-id="<?php echo $args['id']; ?>"
                   class="vote-select creator-block_modal_vote-btn w-button">Vote Now
@@ -131,9 +143,11 @@
         </div>
       </div>
     </div>
+    <div class="creator-block_modal_overlay"></div>
   </div>
   <div class="creator-block_inner-wrap">
-    <h3 class="creator-block_name" id='creator-name-<?php echo $args['id']; ?>'><?php echo $args['name']; ?></h3>
+    <h3 class="creator-block_name" id='creator-name-<?php echo $args['id']; ?>'>
+      <?php echo $args['name']; ?></h3>
     <div class="creator-block_info-wrap">
       <div class="creator-block_info-overlay">
         <button bd-data='open-modal' aria-controls='modal-<?php echo $args['id']; ?>'

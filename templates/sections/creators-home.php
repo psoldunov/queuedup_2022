@@ -1,3 +1,17 @@
+<?php if ( is_user_logged_in() ) {
+
+  $user_id = $args['user_id'];
+
+  $vote_date = get_user_meta( $args['user_id'], 'vote_date', true );
+
+  if ($vote_date && $vote_date < strtotime(get_la_time('Y-m-d'))) {
+    update_user_meta( $args['user_id'], 'us_vote_counter', 0 );
+    update_user_meta( $args['user_id'], 'creators_ids', '' );
+    update_user_meta( $args['user_id'], 'vote_date', '' );
+  }
+}
+?>
+
 <section id="creators" class="section-creators wf-section">
   <div class="section_relative-block">
     <div class="section_content-layer">
@@ -26,6 +40,7 @@
               <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
               <?php get_component('creator', [
+                    'user_id' => $user_id,
                     'post_data' => $post,
                     'id' => get_the_ID(),
                     'name' => get_the_title(),
