@@ -70,3 +70,38 @@ body.admin-bar > .page-wrapper > header {
 		opacity: 0.66;
 	}
 }
+
+/*RT Fixes*/
+.page_rich-text > figure {
+	padding-right: 1px;
+}
+
+figure.wp-block-table {
+	max-width: none;
+	width: 100%;
+}
+
+figure.wp-block-image > a > img {
+	width: auto;
+}
+
+figure.wp-block-image img {
+	width: auto;
+}
+
+.page_rich-text a {
+	color: #da2627;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.page_rich-text > figure > table {
+	width: 100%;
+}
+
+.page_rich-text > figure > table > tbody > tr > td {
+	padding: 8px;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+}

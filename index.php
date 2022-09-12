@@ -3,7 +3,7 @@
   <div class="page-padding">
     <div class="container-small">
       <div class="padding-section-huge">
-        <div class="max-width-medium align-center">
+        <div class="max-width-large align-center">
           <?php
           
             $args = array(
