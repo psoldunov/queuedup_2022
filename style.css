@@ -90,7 +90,7 @@ figure.wp-block-image img {
 }
 
 .page_rich-text a {
-	color: #da2627;
+	color: #ff3b6e;
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -105,3 +105,16 @@ figure.wp-block-image img {
 	border-style: solid;
 	border-width: 1px;
 }
+
+/*Other*/
+
+input[type='search'] {
+	-webkit-appearance: none;
+}
+
+/* ::selection {
+	background: #ff3b6e;
+}
+::-moz-selection {
+	background: #ff3b6e; 
+} */
