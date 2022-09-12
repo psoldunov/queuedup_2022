@@ -1,0 +1,72 @@
+/*
+Theme Name: Queued Up 2022
+Author: Boundary Digital
+Author URI: https://boundaryla.com/
+Description: This is a custom theme for HyperX' "Queued Up" site.
+Tags: custom
+Version: 1.0
+Text Domain: queuedup
+*/
+
+body.admin-bar,
+body.admin-bar > .page-wrapper > header {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+	body.admin-bar,
+	body.admin-bar > .page-wrapper > header {
+		top: 46px;
+	}
+}
+
+/*Animations*/
+
+@media screen and (min-width: 992px) {
+	.experience_product-instance:hover
+		> .experience_product_thumb-wrap
+		> .experience_product_thumb_border.is-border-1 {
+		transform: translate(0px, -6%);
+		border-color: #ff3b6e;
+	}
+
+	.experience_product-instance:hover
+		> .experience_product_thumb-wrap
+		> .experience_product_thumb_border.is-border-2 {
+		transform: translate(0px, -12%);
+		border-color: #ff3b6e;
+	}
+
+	.experience_product-instance:hover
+		> .experience_product_thumb-wrap
+		> .experience_product_thumb_inner {
+		border-color: #ff3b6e;
+	}
+
+	.creator-block:hover > .creator-block_animated-border.is-border-1 {
+		transform: translate(0px, -2%);
+		border-color: #ff3b6e;
+	}
+
+	.creator-block:hover > .creator-block_animated-border.is-border-2 {
+		transform: translate(0px, -4%);
+		border-color: #ff3b6e;
+	}
+
+	.creator-block:hover > .creator-block_inner-wrap {
+		border-color: #ff3b6e;
+	}
+
+	a.gradient-button:hover > .gradient-button_background {
+		opacity: 1;
+	}
+
+	a.header_text-link {
+		-webkit-transition: opacity 500ms ease;
+		transition: opacity 500ms ease;
+	}
+
+	a.header_text-link:hover {
+		opacity: 0.66;
+	}
+}
