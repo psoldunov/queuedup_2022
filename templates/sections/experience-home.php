@@ -12,32 +12,32 @@
             </div>
             <div class="experience_product-grid">
               <?php get_component('product', [
-                'name'	=> 'HyperX CloudX Stinger Core Wireless Gaming Headset',
+                'name'	=> 'Cloud II Gaming Headset',
                 'image'	=> 'headset.webp',
                 'description' => 'Complete Wireless Freedom for Xbox',
                 'learn_link' => 'https://hyperx.com/products/hyperx-cloud-ii?variant=40998813827229',
 								'buy_link' => 'https://hyperx-us.myshopify.com/cart/40998813827229:1?attributes[source]=queuedup',
               ]) ?>
               <?php get_component('product', [
-                'name'	=> 'HyperX QuadCast',
+                'name'	=> 'Pulsefire Haste Gaming Mouse',
                 'image'	=> 'mic.webp',
                 'description' => 'Full-featured standalone mic for streamers, content creators, and gamers.',
-                'learn_link' => '#',
-								'buy_link' => '#',
+                'learn_link' => 'https://hyperx.com/products/hyperx-pulsefire-haste-gaming-mouse?variant=41031680360605',
+								'buy_link' => 'https://hyperx-us.myshopify.com/cart/41031680360605:1?attributes[source]=queuedup',
               ]) ?>
               <?php get_component('product', [
-                'name'	=> 'Alloy Origins 60',
+                'name'	=> 'Alloy Origins 60 Mechanical Gaming Keyboard',
                 'image'	=> 'keyboard.webp',
                 'description' => 'Make room for more plays.',
-                'learn_link' => '#',
-								'buy_link' => '#',
+                'learn_link' => 'https://hyperx.com/products/hyperx-alloy-origins-60-mechanical-gaming-keyboard?variant=42344887386269',
+								'buy_link' => 'https://hyperx-us.myshopify.com/cart/42344887386269:1?attributes[source]=queuedup',
               ]) ?>
               <?php get_component('product', [
-                'name'	=> 'HyperX SoloCast',
+                'name'	=> 'Quadcast S Microphone',
                 'image'	=> 'solocast.webp',
                 'description' => 'A must have for video editors, streamers, and gamers',
-                'learn_link' => '#',
-								'buy_link' => '#',
+                'learn_link' => 'https://hyperx.com/products/hyperx-quadcast-s-usb-microphone?variant=41031692058781',
+								'buy_link' => 'https://hyperx-us.myshopify.com/cart/41031692058781:1?attributes[source]=queuedup',
               ]) ?>
             </div>
           </div>
