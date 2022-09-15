@@ -253,7 +253,8 @@ class social_links {
 		$qu_instagram = get_post_meta( $post->ID, 'qu_instagram', true );
 		$qu_facebook = get_post_meta( $post->ID, 'qu_facebook', true );
 		$qu_twitter = get_post_meta( $post->ID, 'qu_twitter', true );
-		$qu_tiktok = get_post_meta( $post->ID, 'qu_tiktok', true );
+		$qu_discord = get_post_meta( $post->ID, 'qu_tiktok', true );
+		$qu_discord = get_post_meta( $post->ID, 'qu_discord', true );
 		$qu_patreon = get_post_meta( $post->ID, 'qu_patreon', true );
 
 		// Set default values.
@@ -261,6 +262,7 @@ class social_links {
 		if( empty( $qu_facebook ) ) $qu_facebook = '';
 		if( empty( $qu_twitter ) ) $qu_twitter = '';
 		if( empty( $qu_tiktok ) ) $qu_tiktok = '';
+		if( empty( $qu_discord ) ) $qu_discord = '';
 		if( empty( $qu_patreon ) ) $qu_patreon = '';
 
 		// Form fields.
@@ -295,6 +297,13 @@ class social_links {
 		echo '	</tr>';
 
 		echo '	<tr>';
+		echo '		<th><label for="qu_discord" class="qu_discord_label">' . __( 'Discord', 'queuedup' ) . '</label></th>';
+		echo '		<td>';
+		echo '			<input type="text" id="qu_discord" name="qu_discord" class="qu_discord_field" placeholder="' . esc_attr__( '', 'queuedup' ) . '" value="' . esc_attr( $qu_discord ) . '">';
+		echo '		</td>';
+		echo '	</tr>';
+
+		echo '	<tr>';
 		echo '		<th><label for="qu_patreon" class="qu_patreon_label">' . __( 'Patreon', 'queuedup' ) . '</label></th>';
 		echo '		<td>';
 		echo '			<input type="text" id="qu_patreon" name="qu_patreon" class="qu_patreon_field" placeholder="' . esc_attr__( '', 'queuedup' ) . '" value="' . esc_attr( $qu_patreon ) . '">';
@@ -312,6 +321,7 @@ class social_links {
 		$qu_new_facebook = isset( $_POST[ 'qu_facebook' ] ) ? sanitize_text_field( $_POST[ 'qu_facebook' ] ) : '';
 		$qu_new_twitter = isset( $_POST[ 'qu_twitter' ] ) ? sanitize_text_field( $_POST[ 'qu_twitter' ] ) : '';
 		$qu_new_tiktok = isset( $_POST[ 'qu_tiktok' ] ) ? sanitize_text_field( $_POST[ 'qu_tiktok' ] ) : '';
+		$qu_new_discord = isset( $_POST[ 'qu_discord' ] ) ? sanitize_text_field( $_POST[ 'qu_discord' ] ) : '';
 		$qu_new_patreon = isset( $_POST[ 'qu_patreon' ] ) ? sanitize_text_field( $_POST[ 'qu_patreon' ] ) : '';
 
 		// Update the meta field in the database.
@@ -319,6 +329,7 @@ class social_links {
 		update_post_meta( $post_id, 'qu_facebook', $qu_new_facebook );
 		update_post_meta( $post_id, 'qu_twitter', $qu_new_twitter );
 		update_post_meta( $post_id, 'qu_tiktok', $qu_new_tiktok );
+		update_post_meta( $post_id, 'qu_discord', $qu_new_discord );
 		update_post_meta( $post_id, 'qu_patreon', $qu_new_patreon );
 
 	}

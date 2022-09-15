@@ -1,4 +1,4 @@
-<div class="icon-1x1-<?php echo $args['size']; ?> w-embed">
+<div class="icon-1x1-<?php echo $args['size']; ?>">
   <svg aria-hidden="true" role="img" fill=currentColor xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
     <title>Patreon icon</title>
     <path

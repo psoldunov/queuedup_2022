@@ -49,19 +49,27 @@
             </div>
             <div class="creator-location-platform">
               <div class="location-platform-grid">
+                <?php
+                  $location = get_post_meta($args['post_data']->ID, 'qu_location', true);
+                  $platforms = get_the_term_list( $args['post_data']->ID, 'platforms', '', ', ', '' );
+                if ($location) { ?>
                 <div class="creator-block_info-line">
                   <?php get_icon('location', 'auto') ?>
                   <div class="text-weight-bold">
-                    <?php echo get_post_meta($args['post_data']->ID, 'qu_location', true); ?>
+                    <?php echo $location; ?>
                   </div>
                 </div>
+                <?php }
+                  if ($platforms) { ?>
                 <div class="creator-block_info-line">
                   <?php get_icon('platforms', 'auto') ?>
                   <div class="text-weight-bold">
-                    <?php echo strip_tags(get_the_term_list( $args['post_data']->ID, 'platforms', '', ', ', '' )); ?>
+                    <?php echo strip_tags($platforms); ?>
                   </div>
                 </div>
+                <?php } ?>
               </div>
+
             </div>
             <p class="text-size-regular">
               <?php echo $args['bio']; ?>
@@ -93,8 +101,17 @@
                   if ($tik_handle) { ?>
 
                 <a target="_blank" href="https://www.tiktok.com/@<?php echo $tik_handle; ?>"
-                  class="social-btn w-inline-block">
+                  class="creator-block_modal_social-btn w-inline-block">
                   <?php get_icon('tiktok', 'medium') ?>
+                </a>
+
+                <?php } 
+                  $dis_handle = get_post_meta( $post->ID, 'qu_discord', true );
+                  if ($dis_handle) { ?>
+
+                <a target="_blank" href="https://www.discordapp.com/users/<?php echo $dis_handle; ?>"
+                  class="creator-block_modal_social-btn w-inline-block">
+                  <?php get_icon('discord', 'medium') ?>
                 </a>
 
                 <?php } ?>
