@@ -20,6 +20,7 @@
   <meta property="og:description"
     content="The selected creators will receive benefits and prize packages designed to help scale their brands, including a 12-month paid contract with HyperX and an all-expense paid trip to Los Angeles, CA.">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon.ico">
   <link href="<?php echo get_template_directory_uri(); ?>/images/favicon/Icon_72x.webp" rel="apple-touch-icon"
     sizes="72x72">
   <link href="<?php echo get_template_directory_uri(); ?>/images/favicon/Icon_144x.webp" rel="apple-touch-icon"

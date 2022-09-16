@@ -149,7 +149,8 @@
 
                 <?php } else { ?>
 
-                <a href="<?php echo site_url('/registration/'); ?>" class="creator-block_modal_vote-btn w-button">Vote
+                <a href="<?php echo site_url('/wp-login.php?action=register'); ?>"
+                  class="creator-block_modal_vote-btn w-button">Vote
                   Now</a>
 
                 <?php } ?>

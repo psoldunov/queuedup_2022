@@ -32,7 +32,7 @@ function change_reg_message($message)
 {
 	// change messages that contain 'Register'
 	if (strpos($message, 'Register') !== FALSE) {
-		$newMessage = "Please create an account in order to vote. Due to overwhelming support from the community, we’re experiencing longer than normal verification times around some accounts. The voting integrity of Queued Up is immensely important to us at HyperX. In an effort to prevent botting, please allow up to 2 hours for your email verification to arrive and don’t forget to check your spam.";
+		$newMessage = "Please create an account in order to vote. Due to overwhelming support from the community, we’re experiencing longer than normal verification times around some accounts. The voting integrity of Queued Up is immensely important to us at HyperX. In an effort to prevent botting, please allow up to 10 minutes for your email verification to arrive and don’t forget to check your spam.";
 		return '<p class="message register">' . $newMessage . '</p>';
 	}
 	else {
@@ -47,7 +47,7 @@ add_action('login_message', 'change_reg_message');
 
 function custom_loginheader() { ?>
 
-	<?php get_template_part( 'login-header' ); ?>
+<?php get_template_part( 'login-header' ); ?>
 
 
 <?php }
@@ -58,12 +58,12 @@ add_action('login_header','custom_loginheader');
 
 function custom_loginfooter() { ?>
 
-	<?php get_template_part( 'login-footer' ); ?>
+<?php get_template_part( 'login-footer' ); ?>
 
 <script>
-	   	document.querySelector('#user_login').setAttribute('placeholder','<?php _e( 'Username or Email Address' ); ?>');
-	   	document.querySelector('#user_pass').setAttribute('placeholder','<?php _e( 'Password' ); ?>');
-	   	document.querySelector('p.forgetmenot label').innerHTML = "<?php _e( 'Remember me' , 'queuedup' ); ?>";
+document.querySelector('#user_login').setAttribute('placeholder', '<?php _e( 'Username or Email Address' ); ?>');
+document.querySelector('#user_pass').setAttribute('placeholder', '<?php _e( 'Password' ); ?>');
+document.querySelector('p.forgetmenot label').innerHTML = "<?php _e( 'Remember me' , 'queuedup' ); ?>";
 </script>
 <?php }
 
@@ -86,7 +86,7 @@ add_filter( 'login_title', 'custom_login_title' );
 // Login Head
 
 function login_favicon() {
-	echo '<link rel="icon" type="image/png" sizes="32x32" href="' . get_template_directory_uri() . '/images/favicon.png">' . PHP_EOL;
+	echo '<link rel="icon" type="image/webp" sizes="32x32" href="' . get_template_directory_uri() . '/images/favicon/Icon_32x.webp">' . PHP_EOL;
 }
 add_action( 'login_head', 'login_favicon' );
 

@@ -57,6 +57,10 @@ body.admin-bar > .page-wrapper > header {
 		border-color: #ff3b6e;
 	}
 
+	.creator-block:hover > .creator-block_inner-wrap > .creator-block_name {
+		border-color: #ff3b6e;
+	}
+
 	a.gradient-button:hover > .gradient-button_background {
 		opacity: 1;
 	}
@@ -118,3 +122,7 @@ input[type='search'] {
 ::-moz-selection {
 	background: #ff3b6e; 
 } */
+
+.check-email-verification {
+	color: #000;
+}

@@ -1513,6 +1513,7 @@ blockquote {
 	background-color: rgba(205, 29, 112, 0.3);
 	-webkit-filter: blur(14.75rem);
 	filter: blur(14.75rem);
+	transform: translate3d(0, 0, 0);
 }
 
 .glow-shape_red.hero_1 {
@@ -1604,6 +1605,7 @@ blockquote {
 	background-color: #070140;
 	-webkit-filter: blur(14.75rem);
 	filter: blur(14.75rem);
+	transform: translate3d(0, 0, 0);
 }
 
 .glow-shape_blue.hero_1 {
@@ -1927,6 +1929,8 @@ blockquote {
 	line-height: 1;
 	font-weight: 800;
 	text-align: center;
+	-webkit-transition: background-color 500ms ease;
+	transition: background-color 500ms ease;
 }
 
 .creator-block_info-wrap {

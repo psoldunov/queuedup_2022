@@ -6,9 +6,7 @@
           <div class="padding-section-medium">
             <div class="align-center">
               <div class="margin-bottom margin-xhuge">
-                <h2
-                  class="heading-style-h2 text-font-rbno31 text-weight-black is-center-mobile"
-                >
+                <h2 class="heading-style-h2 text-font-rbno31 text-weight-black is-center-mobile">
                   How to vote
                 </h2>
               </div>
@@ -16,12 +14,8 @@
             <div class="padding-bottom padding-custom-vote is-0rem-mobile">
               <div class="steps_flex-block">
                 <div class="steps_instance-block">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/images/step-01.svg"
-                    loading="lazy"
-                    alt="01"
-                    class="steps_instance_image"
-                  />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/step-01.svg" loading="lazy" alt="01"
+                    class="steps_instance_image" />
                   <div class="steps_instance_paragraph-wrap">
                     <div class="steps_instance_paragraph_inner-wrap">
                       <p class="text-size-xtra text-align-center">
@@ -31,19 +25,11 @@
                     </div>
                   </div>
                 </div>
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/images/steps-arrow.svg"
-                  loading="lazy"
-                  alt=""
-                  class="steps_flex-block_arrow"
-                />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/steps-arrow.svg" loading="lazy" alt=""
+                  class="steps_flex-block_arrow" />
                 <div class="steps_instance-block">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/images/step-02.svg"
-                    loading="lazy"
-                    alt="02"
-                    class="steps_instance_image"
-                  />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/step-02.svg" loading="lazy" alt="02"
+                    class="steps_instance_image" />
                   <div class="steps_instance_paragraph-wrap">
                     <div class="steps_instance_paragraph_inner-wrap">
                       <p class="text-size-xtra text-align-center">
@@ -53,19 +39,11 @@
                     </div>
                   </div>
                 </div>
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/images/steps-arrow.svg"
-                  loading="lazy"
-                  alt=""
-                  class="steps_flex-block_arrow"
-                />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/steps-arrow.svg" loading="lazy" alt=""
+                  class="steps_flex-block_arrow" />
                 <div class="steps_instance-block">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/images/step-03.svg"
-                    loading="lazy"
-                    alt="03"
-                    class="steps_instance_image"
-                  />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/step-03.svg" loading="lazy" alt="03"
+                    class="steps_instance_image" />
                   <div class="steps_instance_paragraph-wrap">
                     <div class="steps_instance_paragraph_inner-wrap">
                       <p class="text-size-xtra text-align-center">
@@ -81,9 +59,9 @@
             <div class="padding-top padding-medium">
               <div class="flex-align-center">
                 <div class="inline-block">
-                    <?php get_component('gradient-button', [
+                  <?php get_component('gradient-button', [
                       'text'	=> 'Sign Up to Vote',
-                      'link'	=> '/registration',
+                      'link'	=> '/wp-login.php?action=register',
                     ]) ?>
                 </div>
               </div>
