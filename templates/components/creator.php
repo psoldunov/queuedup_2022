@@ -41,11 +41,7 @@
 
             </div>
             <div class="creator-block_modal_name-row">
-              <div class="creator-block_modal_name-text">
-                <?php echo get_post_meta($args['post_data']->ID, 'qu_real_name', true); ?>
-              </div>
-              <span style="text-transform: lowercase"
-                class="creator-block_modal_name-link">@<?php echo $args['name']; ?></span>
+              <span class="creator-block_modal_name-link">@<?php echo $args['name']; ?></span>
             </div>
             <div class="creator-location-platform">
               <div class="location-platform-grid">
@@ -71,9 +67,11 @@
               </div>
 
             </div>
-            <p class="text-size-regular">
-              <?php echo $args['bio']; ?>
-            </p>
+            <div class="mobile-padding">
+              <p class="text-size-regular">
+                <?php echo $args['bio']; ?>
+              </p>
+            </div>
             <div class="creator-block_modal_games-grid_outer">
               <div class="creator-block_modal_games-grid">
                 <?php echo strip_tags(get_the_term_list( $args['post_data']->ID, 'games', '<div class="creator-block_modal_games-label">', '</div><div class="creator-block_modal_games-label">', '</div>' ), '<div>'); ?>

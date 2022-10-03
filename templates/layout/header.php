@@ -28,12 +28,12 @@
               <?php if (!is_user_logged_in()) { ?>
               <?php get_component('header_text-link', [
 									'text'	=> 'Login',
-									'link'	=> '/wp-login.php',
+									'link'	=> '/login/',
 								]) ?>
               <?php if (!disableVoting()) { ?>
               <?php get_component('gradient-button_filled', [
 										'text'	=> 'Sign up to vote!',
-										'link'	=> '/wp-login.php?action=register',
+										'link'	=> '/registration/',
 										'hide-mobile' => true,
 									]) ?>
               <?php } ?>

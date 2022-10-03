@@ -21,7 +21,7 @@
               <div class="committee_bottom-row">
                 <div class="committee_group-image_wrap">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/committee-img.webp" loading="eager"
-                    width="1163" alt="Queued Up Selection Committee" class="committee_group-image" />
+                    width="1163" alt="HyperX & 1000 Dreams Fund" class="committee_group-image" />
                 </div>
               </div>
             </div>

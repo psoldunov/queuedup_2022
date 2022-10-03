@@ -71,4 +71,14 @@ add_action( 'admin_init', 'restrict_admin_with_redirect', 1 );
 
 // add_filter('pre_user_nicename', 'filter_user_registration_ip', 10, 1);
 
+function user_id_exists($user){
+
+    global $wpdb;
+
+    $count = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $wpdb->users WHERE ID = %d", $user));
+
+    if($count == 1){ return true; }else{ return false; }
+
+}
+
 ?>

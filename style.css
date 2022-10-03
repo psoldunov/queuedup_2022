@@ -126,3 +126,38 @@ input[type='search'] {
 .check-email-verification {
 	color: #000;
 }
+
+@media screen and (max-width: 767px) {
+	.mobile-padding {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+.user-registration {
+	color: black;
+}
+
+input.ur-frontend-field {
+	color: #000 !important;
+}
+
+.ur-frontend-form {
+	background-color: #fff !important;
+}
+
+.ur-submit-button {
+	background-color: #ff3b6e !important;
+	color: #fff !important;
+}
+
+.ur-submit-button:hover {
+	background-color: #000 !important;
+	color: #fff !important;
+}
+
+form.register > div#ur-recaptcha-node > .g-recaptcha {
+	margin-top: 2rem;
+	padding-left: 10px;
+	padding-right: 10px;
+}

@@ -3849,27 +3849,6 @@ blockquote {
 		font-size: 3rem;
 	}
 
-	.committee_group-image {
-		width: 64rem;
-		max-width: none;
-	}
-
-	.committee_group-image_wrap {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
-	}
-
 	.container-header {
 		max-width: 51.75rem;
 	}
@@ -4444,10 +4423,6 @@ blockquote {
 		grid-row-gap: 2rem;
 	}
 
-	.committee_group-image {
-		width: 120%;
-	}
-
 	.header {
 		height: 5.25rem;
 	}
@@ -4779,10 +4754,6 @@ blockquote {
 
 	.experience_product-grid {
 		grid-column-gap: 1.5rem;
-	}
-
-	.committee_group-image {
-		width: 140%;
 	}
 
 	.container-header {

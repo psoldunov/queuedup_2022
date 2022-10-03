@@ -14,14 +14,14 @@
               <?php get_component('product', [
                 'name'	=> 'Cloud II Gaming Headset',
                 'image'	=> 'headset.webp',
-                'description' => 'Complete Wireless Freedom for Xbox',
+                'description' => 'The HyperX Cloud II was built to be an ultra-comfortable gaming headset with amazing sound',
                 'learn_link' => 'https://hyperx.com/products/hyperx-cloud-ii?variant=40998813827229',
 								'buy_link' => 'https://hyperx-us.myshopify.com/cart/40998813827229:1?attributes[source]=queuedup',
               ]) ?>
               <?php get_component('product', [
                 'name'	=> 'Pulsefire Haste Gaming Mouse',
-                'image'	=> 'mic.webp',
-                'description' => 'Full-featured standalone mic for streamers, content creators, and gamers.',
+                'image'	=> 'mouse.webp',
+                'description' => 'Weighing in at 59 grams, this full-featured, responsive honeycomb shell mouse has everything you need, just without the extra weight.',
                 'learn_link' => 'https://hyperx.com/products/hyperx-pulsefire-haste-gaming-mouse?variant=41031680360605',
 								'buy_link' => 'https://hyperx-us.myshopify.com/cart/41031680360605:1?attributes[source]=queuedup',
               ]) ?>
@@ -33,9 +33,9 @@
 								'buy_link' => 'https://hyperx-us.myshopify.com/cart/42344887386269:1?attributes[source]=queuedup',
               ]) ?>
               <?php get_component('product', [
-                'name'	=> 'Quadcast S Microphone',
-                'image'	=> 'solocast.webp',
-                'description' => 'A must have for video editors, streamers, and gamers',
+                'name'	=> 'QuadCast™ S Microphone',
+                'image'	=> 'mic.webp',
+                'description' => 'USB condenser microphone that both sounds great and looks great.',
                 'learn_link' => 'https://hyperx.com/products/hyperx-quadcast-s-usb-microphone?variant=41031692058781',
 								'buy_link' => 'https://hyperx-us.myshopify.com/cart/41031692058781:1?attributes[source]=queuedup',
               ]) ?>

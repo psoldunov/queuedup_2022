@@ -10,23 +10,41 @@ add_action( 'rest_api_init', function () {
 });
 
 function update_vote( WP_REST_Request $request ) {
-  update_vote_number($request['id']);
-  update_user_vote_id($request['usid'], $request['id']);
-  update_user_vote_date($request['usid'], $request['undate']);
-  update_user_vote_count($request['usid']);
+  if (user_id_exists($request['usid'])) {
+    if (vote_security_check($request['usid'], $request['id'])) {
+      update_vote_number($request['id']);
+      update_user_vote_id($request['usid'], $request['id']);
+      update_user_vote_date($request['usid'], $request['undate']);
+      update_user_vote_count($request['usid']);
+    };
+  };
+};
+
+function vote_security_check($user_id, $id) {
+  $ids_string = get_user_meta($user_id, 'creators_ids', true);
+  $counter = get_user_meta($user_id, 'us_vote_counter', true);
+  
+  if (str_contains($ids_string, $id)) { 
+    return false;
+  };
+
+  if (intval($counter) >= 5) {
+    return false;
+  };
+
+  return true;
 }
 
 function update_vote_number( $id ) {
-    // Custom field slug
-    $field_name = 'qu_votes';
-    // Get the current like number for the post
-    $current_votes = get_post_meta($id, $field_name, true);
-    // Add 1 to the existing number
-    $updated_votes = $current_votes + 1;
-    // Update the field with a new value on this post
-    $votes = update_post_meta($id, $field_name, $updated_votes);
-
-    return $votes;
+  $field_name = 'qu_votes';
+  // Get the current like number for the post
+  $current_votes = get_post_meta($id, $field_name, true);
+  // Add 1 to the existing number
+  $updated_votes = $current_votes + 1;
+  // Update the field with a new value on this post
+  $votes = update_post_meta($id, $field_name, $updated_votes);
+  
+  return $votes;
 }
 
 function update_user_vote_id( $user_id, $id ) {

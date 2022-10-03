@@ -32,7 +32,7 @@ function change_reg_message($message)
 {
 	// change messages that contain 'Register'
 	if (strpos($message, 'Register') !== FALSE) {
-		$newMessage = "Please create an account in order to vote. Due to overwhelming support from the community, we’re experiencing longer than normal verification times around some accounts. The voting integrity of Queued Up is immensely important to us at HyperX. In an effort to prevent botting, please allow up to 10 minutes for your email verification to arrive and don’t forget to check your spam.";
+		$newMessage = "Please create an account in order to vote. In an effort to prevent botting, please allow up to 10 minutes for your email verification to arrive and don’t forget to check your spam.";
 		return '<p class="message register">' . $newMessage . '</p>';
 	}
 	else {
@@ -87,6 +87,7 @@ add_filter( 'login_title', 'custom_login_title' );
 
 function login_favicon() {
 	echo '<link rel="icon" type="image/webp" sizes="32x32" href="' . get_template_directory_uri() . '/images/favicon/Icon_32x.webp">' . PHP_EOL;
+	echo '<link rel="icon" type="image/x-icon" href="' . get_template_directory_uri() . '/images/favicon/favicon.ico">' . PHP_EOL;
 }
 add_action( 'login_head', 'login_favicon' );
 

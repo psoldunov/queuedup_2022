@@ -32,7 +32,7 @@ div#login_error {
 	border-right: 0.5px solid #777 !important;
 	border-bottom: 4px solid #e60019 !important;
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.16) !important;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 div#login_error a {
@@ -53,7 +53,7 @@ p.message {
 	border-right: 0.5px solid #777 !important;
 	border-bottom: 4px solid #ff3b6e !important;
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.16) !important;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 .login-navbar {
@@ -104,6 +104,10 @@ p.message {
 	height: 50px;
 }
 
+input.button {
+	border-radius: 0px !important;
+}
+
 .text-link {
 	color: #ff3b6e;
 	font-weight: bold;
@@ -138,7 +142,7 @@ p#nav a:hover {
 
 #loginform {
 	padding: 26px 24px 26px 24px;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0.5px solid #777;
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.16);
 }
@@ -169,7 +173,7 @@ input#user_email {
 	font-size: 14px;
 	padding-left: 16px;
 	color: #000;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0.5px solid #777;
 }
 
@@ -228,7 +232,7 @@ a:focus {
 
 #lostpasswordform {
 	padding: 26px 24px 26px 24px;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0.5px solid #777;
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.16);
 }

@@ -31,6 +31,8 @@
                   $args = array(
                     'post_type' => 'creators',
                     'order' => 'ASC',
+                    'orderby' => 'title',
+                    'order'   => 'ASC',
                     'posts_per_page' => -1,
                   );
                   $query = new WP_Query( $args );
