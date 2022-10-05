@@ -34,10 +34,13 @@
                     </p>
                   </div>
                   <div class="margin-top margin-medium">
-                    <?php get_component('gradient-button', [
-                      'text'	=> 'Vote Now!',
-                      'link'	=> '#creators',
-                    ]) ?>
+                    <?php if (!disableVoting()) {
+                      get_component('gradient-button', [
+                        'text'	=> 'Vote Now!',
+                        'link'	=> '#creators',
+                      ]);
+                    };
+                    ?>
                   </div>
                 </div>
               </div>

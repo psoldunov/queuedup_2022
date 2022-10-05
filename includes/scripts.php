@@ -4,6 +4,7 @@ function qu_enqueue_scripts() {
   wp_deregister_script( 'jquery' );
   wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', false, null, true );
   wp_enqueue_script('webflow', get_template_directory_uri() . '/js/webflow.js', array( 'jquery' ), null, true );
+  wp_enqueue_script('twitch', 'https://embed.twitch.tv/embed/v1.js', false, null, true );
   if (!disableVoting()) {
     wp_enqueue_script('voting', get_template_directory_uri() . '/js/voting.js', array( 'jquery' ), null, true );
     wp_localize_script( 'voting', 'bloginfo', array(
@@ -15,7 +16,8 @@ function qu_enqueue_scripts() {
     ));
   }
   wp_enqueue_script('app', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), null, true );
-  wp_localize_script( 'app', 'twitch', array(
+  wp_enqueue_script('twscript', get_template_directory_uri() . '/js/twscript.js', array( 'jquery' ), null, true );
+  wp_localize_script( 'twscript', 'twitch', array(
     'site_parsed' => parse_url(get_bloginfo('url'))['host'],
     'winner_mode' => winnerMode()
   ));
