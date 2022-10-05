@@ -7,7 +7,7 @@
             <div class="align-center max-width-large">
               <div class="margin-bottom margin-large">
                 <p class="text-size-xtra text-align-center">Voting is now CLOSED. Tune in to the HyperX Twitch channel
-                  on October 21st at 3pm PST to find out who won!</p>
+                  on October 21st at 1pm PST to find out who won!</p>
               </div>
             </div>
             <div class="align-center max-width-large">
